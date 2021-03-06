@@ -19,7 +19,8 @@
                     <div class="col s12 m12 l4">
                         <div class="profile center-align">
                             <div class="avatar">
-                                <img src="<%- theme.jsDelivr.url %><%- url_for(theme.profile.avatar) %>" alt="<%- config.author %>"
+                                <img src="<%- theme.jsDelivr.url %><%- theme.profile.avatar %>"
+                                     alt="<%- config.author %>"
                                      class="circle responsive-img avatar-img">
                             </div>
                             <div class="author">
@@ -46,21 +47,26 @@
                 <%- partial('_widget/post-charts') %>
 
                 <% if (theme.myProjects && theme.myProjects.enable) { %>
-                <%- partial('_widget/my-projects') %>
+                    <%- partial('_widget/my-projects') %>
                 <% } %>
 
                 <% if (theme.mySkills && theme.mySkills.enable) { %>
-                <%- partial('_widget/my-skills') %>
+                    <%- partial('_widget/my-skills') %>
                 <% } %>
 
                 <% if (theme.myGallery && theme.myGallery.enable) { %>
-                <%- partial('_widget/my-gallery') %>
+                    <%- partial('_widget/my-gallery') %>
                 <% } %>
-                
-                <% if (theme.artitalk && theme.artitalk.enable) { %>
-                <%- partial('_widget/artitalk') %>
-                <% } %>
-                
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-content article-card-content">
+                    <div class="title center-align" data-aos="zoom-in-up"><i
+                                class="fa fa-address-book"></i>&nbsp;&nbsp;<%- __('myCV') %> </div>
+                    <div id="articleContent" data-aos="fade-up"> <%- page.content %> </div>
+                </div>
             </div>
         </div>
     </div>
